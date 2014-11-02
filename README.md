@@ -1,20 +1,19 @@
 domwalk
 =======
 
-  traverses dom recursively
-
+  traverses recursively dom elements as well as text nodes.
 
 ## Usage
 
+  Using recursion is faster than using simple loops or iteratively walk the dom.
 
 ```js
 var walk = require('domwalk');
 
 walk(document.body, function(node) {
-	// do something
+	// do something on node
 });
 ```
-
 
 ## License
 
