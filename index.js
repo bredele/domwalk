@@ -19,6 +19,11 @@ module.exports = walk;
  * @api public
  */
 
-function walk() {
-  //do something
+function walk(node, cb, scope) {
+  cb.call(scope, node);
+  node = node.firstChild;
+  while (node) {
+    walk(node, cb);
+    node = node.nextSibling;
+  }
 }
