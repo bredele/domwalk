@@ -15,12 +15,11 @@ module.exports = walk;
  * 
  * @param {ELement} node
  * @param {Function} cb
- * @param {Object} scope
  * @api public
  */
 
-function walk(node, cb, scope) {
-  cb.call(scope, node);
+function walk(node, cb) {
+  cb(scope);
   node = node.firstChild;
   while (node) {
     walk(node, cb);
