@@ -1,7 +1,7 @@
 domwalk
 =======
 
-  traverses recursively dom elements as well as text nodes.
+  walk dom elements as well as text nodes.
 
 ## Usage
 
