@@ -19,7 +19,7 @@ module.exports = walk;
  */
 
 function walk(node, cb) {
-  cb(scope);
+  cb(node);
   node = node.firstChild;
   while (node) {
     walk(node, cb);
