@@ -22,7 +22,8 @@ function walk(node, cb) {
   cb(node);
   node = node.firstChild;
   while (node) {
+  	var next = node.nextSibling
     walk(node, cb);
-    node = node.nextSibling;
+    node = next;
   }
 }
